@@ -28,16 +28,30 @@ const Navbar: React.FC = () => {
         <ul
           className={`fixed top-0 left-0 h-full px-5 w-64 bg-black transform ${
             isOpen ? "translate-x-0" : "-translate-x-full"
-          } md:static md:flex md:flex-row md:items-center md:space-x-8 transition-transform duration-300 ease-in-out z-10 md:ml-auto`}
+          } md:static md:flex md:flex-row md:items-center md:space-x-16 md:ml-auto md:pr-12 transition-transform duration-300 ease-in-out z-10`}
         >
           <li className="my-4 md:my-0">
-            <a href="/" className="block text-lg hover:text-lime-300">
-              Home
+            <a
+              href="/"
+              className="block text-lg hover:text-[#830e70] whitespace-nowrap"
+            >
+              Om Oss
             </a>
           </li>
           <li className="my-4 md:my-0">
-            <a href="/about" className="block text-lg hover:text-lime-300">
-              About
+            <a
+              href="/about"
+              className="block text-lg hover:text-[#830e70] whitespace-nowrap"
+            >
+              Tjenester
+            </a>
+          </li>
+          <li className="my-4 md:my-0">
+            <a
+              href="/about"
+              className="block text-lg hover:text-[#830e70] whitespace-nowrap"
+            >
+              Kontakt Oss
             </a>
           </li>
         </ul>

@@ -12,13 +12,13 @@ export default function Home() {
   return (
     <div className="">
       <Hero />
-      <MarqueeDemo />
+      {/* <MarqueeDemo /> */}
       <FeaturesSection />
       <Automatisering />
-      <FAQ />
+      {/* <FAQ /> */}
       <AboutXcruiter />
       <SectionOne />
-      <SectionTwo />
+      {/* <SectionTwo /> */}
     </div>
   );
 }

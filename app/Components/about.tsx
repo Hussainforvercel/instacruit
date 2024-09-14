@@ -19,7 +19,7 @@ const AboutXcruiter = () => {
         transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: true, amount: 0.5 }}
       >
-        Incruiter leverer kvalitetssikrede rekrutteringer av fagpersonell,
+        Instacruit leverer kvalitetssikrede rekrutteringer av fagpersonell,
         nyutdannede og spesialister
       </motion.h2>
       <motion.button
@@ -29,7 +29,7 @@ const AboutXcruiter = () => {
         transition={{ duration: 0.6, delay: 0.4 }}
         viewport={{ once: true, amount: 0.5 }}
       >
-        Om Xcruiter
+        Om Instacruit
       </motion.button>
     </motion.div>
   );

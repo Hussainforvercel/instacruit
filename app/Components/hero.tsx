@@ -48,7 +48,7 @@ const Hero: React.FC = () => {
     <section
       className="relative text-black py-20 overflow-hidden bg-black bg-cover bg-center"
       style={{
-        height: "90vh", // Makes sure the section height fits the viewport
+        height: "80vh", // Makes sure the section height fits the viewport
       }}
     >
       {/* Background Video */}
@@ -57,19 +57,19 @@ const Hero: React.FC = () => {
         muted
         loop
         playsInline
-        className="absolute inset-0 w-1/2 h-full object-cover z-0" // Add z-index
+        className="absolute inset-0 w-1/2 h-full object-cover z-0" // Adjusted for responsiveness
       >
-        <source src="/backgeound-video.mp4" type="video/mp4" />
+        <source src="/normal_pb-66379c38b6706-2.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
       {/* Wavy Lines */}
       <WavyLines />
-      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-end relative z-10 h-full">
+      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center md:justify-end relative z-10 h-full">
         {/* Text Content */}
-        <div className="md:w-1/2 mb-10 md:mb-0 text-right md:pr-10">
+        <div className="w-full md:w-1/2 mb-10 md:mb-0 text-center md:text-right md:pr-10">
           <motion.h1
-            className="text-4xl font-titillium md:text-5xl pr-16 font-bold leading-tight mb-4"
+            className="text-3xl md:text-5xl font-titillium font-bold leading-tight mb-4"
             variants={sentence}
             initial="hidden"
             whileInView="visible"
@@ -77,13 +77,12 @@ const Hero: React.FC = () => {
           >
             {/* Map through the text characters */}
             {text.split("").map((char, index) => {
-              // Check if the character belongs to "InstaCruit"
-              const isPurple = text.indexOf("InstaCruit") <= index; // Determines if the character is part of "InstaCruit"
+              const isPurple = text.indexOf("InstaCruit") <= index;
 
               return (
                 <motion.span
                   key={index}
-                  className={isPurple ? "text-[#830e70]" : "text-white"} // Apply purple for "InstaCruit", white for "welcome"
+                  className={isPurple ? "text-[#830e70]" : "text-white"}
                   variants={letter}
                 >
                   {char}
@@ -93,35 +92,35 @@ const Hero: React.FC = () => {
           </motion.h1>
 
           <motion.p
-            className="text-lg font-mingzat md:text-xl mb-6 text-white"
+            className="text-base md:text-lg lg:text-xl font-mingzat mb-6 text-white"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
             viewport={{ once: false, amount: 0.2 }}
           >
-            InstaCruit: Streamline your hiring process with InstaCruiter – the
-            dependable solution for finding top talent quickly and efficiently
+            InstaCruit: Sikre deg kvalifiserte kandidater med InstaCruiter –
+            ditt pålitelige verktøy for rekruttering!
           </motion.p>
-          <div className="flex justify-end md:justify-start space-x-4 mt-4 md:mt-0">
+          <div className="flex justify-center md:justify-end space-x-4 mt-4">
             <motion.a
               href="#"
-              className="bg-[#830e70] hover:bg-[#bd99bd] text-white font-bold py-3 px-6 rounded-xl transition duration-300"
+              className="bg-[#830e70] hover:bg-[#bd99bd] text-white font-bold py-3 px-6 md:px-10 rounded-xl transition duration-300"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
               viewport={{ once: false, amount: 0.2 }}
             >
-              Register
+              Registrer Interesse
             </motion.a>
             <motion.a
               href="#"
-              className="bg-white hover:bg-[#bd99bd] text-[#830e70] font-bold py-3 px-10 rounded-xl transition duration-300"
+              className="bg-white hover:bg-[#bd99bd] text-[#830e70] font-bold py-3 px-6 md:px-10 rounded-xl transition duration-300"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
               viewport={{ once: false, amount: 0.2 }}
             >
-              Login
+              Logg inn
             </motion.a>
           </div>
         </div>

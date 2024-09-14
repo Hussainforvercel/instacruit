@@ -1,98 +1,164 @@
-// components/FeaturesSection.js
 "use client";
-import React from "react";
-import { motion } from "framer-motion"; // Import motion from framer-motion
-import { FaMoneyBillWave, FaBullhorn, FaCog } from "react-icons/fa"; // Import icons from react-icons
+import { motion } from "framer-motion";
+import Image from "next/image";
 
-const FeaturesSection = () => {
-  // Animation variants for Framer Motion
-  const fadeInUp = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  };
+// Define scroll reveal animations
+const revealVariant = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
 
+const FeaturesSection: React.FC = () => {
   return (
-    <section className="relative bg-pink-100 py-16 overflow-hidden">
-      {/* Video Background */}
+    <section className="relative bg-black py-16 overflow-hidden mt-10">
+      {/* Background Video */}
       <video
-        className="absolute inset-0 w-full h-full object-cover"
-        src="/background-animate.mp4" // Replace with your video path
         autoPlay
-        muted
         loop
-      />
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover z-0 opacity-30"
+      >
+        <source src="/AdobeStock_576025994.mov" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
-      {/* Overlay to add some color to the background video */}
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-center text-xl md:text-3xl font-semibold text-white mb-8">
+      <div className="relative container mx-auto px-6 z-10">
+        <motion.h2
+          className="text-3xl font-bold text-center mb-4 text-white"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.2 }}
+          variants={revealVariant}
+        >
           FUNKSJONER
-        </h2>
-        <div className="text-center mb-12">
-          <span className="inline-block w-10 h-1 bg-white rounded-full"></span>
-        </div>
-
-        {/* Features Grid */}
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 relative">
-          {/* Feature 1 */}
+        </motion.h2>
+        <motion.div
+          className="flex justify-center mb-10"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={revealVariant}
+        >
+          <span className="w-12 h-1 bg-white inline-block rounded-full"></span>
+        </motion.div>
+        <div className="flex flex-col space-y-8">
+          {/* Row 1: Card - Image */}
           <motion.div
-            className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center justify-center text-center space-y-4"
+            className="flex flex-col md:flex-row items-center gap-6"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
-            transition={{ duration: 0.5 }}
-            variants={fadeInUp}
+            viewport={{ once: false, amount: 0.2 }}
+            variants={revealVariant}
           >
-            <FaMoneyBillWave className="w-16 h-16 text-[#830e70]" />
-            <h3 className="text-lg font-bold text-[#830e70]">
-              Reduser kostnader
-            </h3>
-            <p className="text-sm text-gray-700">
-              Senk kostnadene og effektiviser rekrutteringsprosessen med
-              InstaCruiter! Vi tilbyr en kostnadseffektiv løsning som sparer deg
-              for annonseringsutgifter og tid brukt på screenings- og
-              intervjuprosesser.
-            </p>
+            {/* Card 1 */}
+            <motion.div
+              className="flex flex-col text-left p-6 bg-white bg-opacity-80 rounded-lg shadow-lg md:w-1/2"
+              variants={revealVariant}
+            >
+              <h3 className="text-lg font-semibold text-black mb-2">
+                Reduser kostnader
+              </h3>
+              <p className="text-black">
+                Senk kostnadene og effektiviser rekrutteringsprosessen med
+                InstaCruiter! Vi tilbyr en kostnadseffektiv løsning som sparer
+                deg for annonseringsutgifter og tid brukt på screenings- og
+                intervjuprosesser.
+              </p>
+            </motion.div>
+            {/* Image 1 */}
+            <motion.div
+              className="flex items-center justify-center md:w-1/2"
+              variants={revealVariant}
+            >
+              <Image
+                src="/10001.svg" // Replace with your image path
+                alt="Feature 1"
+                width={200}
+                height={200}
+                className="filter-red"
+              />
+            </motion.div>
           </motion.div>
 
-          {/* Feature 2 */}
+          {/* Row 2: Image - Card */}
           <motion.div
-            className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center justify-center text-center space-y-4"
+            className="flex flex-col md:flex-row-reverse items-center gap-6"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
-            transition={{ duration: 0.5 }}
-            variants={fadeInUp}
+            viewport={{ once: false, amount: 0.2 }}
+            variants={revealVariant}
           >
-            <FaBullhorn className="w-16 h-16 text-[#830e70]" />
-            <h3 className="text-lg font-bold text-[#830e70]">
-              Smartannonsering
-            </h3>
-            <p className="text-sm text-gray-700">
-              Maksimer synligheten din med smartannonsering fra InstaCruiter! Vi
-              hjelper deg med å nå ut til et bredere spekter av kandidater ved å
-              målrette annonsene dine mot potensielle talenter som kanskje ikke
-              aktivt søker.
-            </p>
+            {/* Card 2 */}
+            <motion.div
+              className="flex flex-col text-left p-6 bg-white bg-opacity-80 rounded-lg shadow-lg md:w-1/2"
+              variants={revealVariant}
+            >
+              <h3 className="text-lg font-semibold text-black mb-2">
+                Smartannonsering
+              </h3>
+              <p className="text-black">
+                Maksimer synligheten din med smartannonsering fra InstaCruiter!
+                Vi hjelper deg med å nå ut til et bredere spekter av kandidater
+                ved å målrette annonsene dine mot potensielle talenter.
+              </p>
+            </motion.div>
+            {/* Image 2 */}
+            <motion.div
+              className="flex items-center justify-center md:w-1/2"
+              variants={revealVariant}
+            >
+              <Image
+                src="/10002.svg" // Replace with your image path
+                alt="Feature 2"
+                width={200}
+                height={200}
+              />
+            </motion.div>
           </motion.div>
 
-          {/* Feature 3 */}
+          {/* Row 3: Card - Image */}
           <motion.div
-            className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center justify-center text-center space-y-4"
+            className="flex flex-col md:flex-row items-center gap-6"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
-            transition={{ duration: 0.5 }}
-            variants={fadeInUp}
+            viewport={{ once: false, amount: 0.2 }}
+            variants={revealVariant}
           >
-            <FaCog className="w-16 h-16 text-[#830e70]" />
-            <h3 className="text-lg font-bold text-[#830e70]">Automatisering</h3>
-            <p className="text-sm text-gray-700">
-              Med automatisering fra InstaCruiter, tar vi rekrutteringsprosessen
-              til nye høyder! Vår plattform er designet for å både erstatte og
-              forsterke tradisjonelle stillingsannonser.
-            </p>
+            {/* Card 3 */}
+            <motion.div
+              className="flex flex-col text-left p-6 bg-white bg-opacity-80 rounded-lg shadow-lg md:w-1/2"
+              variants={revealVariant}
+            >
+              <h3 className="text-lg font-semibold text-black mb-2">
+                Automatisering
+              </h3>
+              <p className="text-black">
+                Med automatisering fra InstaCruiter, tar vi
+                rekrutteringsprosessen til nye høyder! Vår plattform er designet
+                for å både erstatte og forsterke tradisjonelle
+                stillingsannonser.
+              </p>
+            </motion.div>
+            {/* Image 3 */}
+            <motion.div
+              className="flex items-center justify-center md:w-1/2"
+              variants={revealVariant}
+            >
+              <Image
+                src="/10003.svg" // Replace with your image path
+                alt="Feature 3"
+                width={200}
+                height={200}
+              />
+            </motion.div>
           </motion.div>
         </div>
       </div>

@@ -19,7 +19,7 @@ export default function SectionOne() {
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true, amount: 0.5 }} // Triggers when 50% of the element is in view
         >
-          En ny måte å rekruttere på
+          Vi presenterer en nyskapende tilnærming til rekruttering.
         </motion.h1>
         <motion.p
           className="text-base sm:text-lg mb-6"
@@ -37,7 +37,7 @@ export default function SectionOne() {
           å tilby effektiv håndtering, evaluering og kommunikasjon med alle
           søkere.
         </motion.p>
-        <motion.p
+        {/* <motion.p
           className="text-base sm:text-lg"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -46,7 +46,7 @@ export default function SectionOne() {
         >
           Plattformen vår gjør det også effektivt og enkelt for rekrutterer å
           håndtere, evaluere og kommunisere med alle som søker på stillingen.
-        </motion.p>
+        </motion.p> */}
       </div>
     </motion.div>
   );
