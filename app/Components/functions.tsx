@@ -26,7 +26,10 @@ const FeaturesSection: React.FC = () => {
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover z-0 opacity-30"
       >
-        <source src="/AdobeStock_576025994.mov" type="video/mp4" />
+        <source
+          src="https://res.cloudinary.com/duh4hll1l/video/upload/v1726345554/uploads/AdobeStock_576025994_ibsh6w.mp4"
+          type="video/mp4"
+        />
         Your browser does not support the video tag.
       </video>
 

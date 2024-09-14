@@ -59,7 +59,10 @@ const Hero: React.FC = () => {
         playsInline
         className="absolute inset-0 w-1/2 h-full object-cover z-0" // Adjusted for responsiveness
       >
-        <source src="/normal_pb-66379c38b6706-2.mp4" type="video/mp4" />
+        <source
+          src="https://res.cloudinary.com/duh4hll1l/video/upload/v1726344994/uploads/normal_pb-66379c38b6706-2_tu94je.mp4"
+          type="video/mp4"
+        />
         Your browser does not support the video tag.
       </video>
 
