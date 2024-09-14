@@ -3,11 +3,11 @@ export default function Footer() {
     <footer className="bg-black px-5 text-white py-8">
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-start space-y-6 md:space-y-0">
         <div>
-          <h3 className="font-bold text-lg">Xcruiter</h3>
+          <h3 className="font-bold text-lg">Incruiter</h3>
           <ul className="space-y-2 mt-2">
-            <li>Org.nr: 930 937 193</li>
-            <li>Pilestredet 8, 0180 Oslo, Norge</li>
-            <li>Repslagargatan 15B, 118 46 Stockholm, Sverige</li>
+            <li>Org.nr: 94099566</li>
+            <li>Ole Deviks vei 4, 0666 Oslo</li>
+            <li>kontakt@instacruit.no</li>
           </ul>
         </div>
 
