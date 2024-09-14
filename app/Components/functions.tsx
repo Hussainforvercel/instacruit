@@ -27,7 +27,7 @@ const FeaturesSection: React.FC = () => {
         className="absolute top-0 left-0 w-full h-full object-cover z-0 opacity-30"
       >
         <source
-          src="https://res.cloudinary.com/duh4hll1l/video/upload/v1726345554/uploads/AdobeStock_576025994_ibsh6w.mp4"
+          src="https://res.cloudinary.com/duh4hll1l/video/upload/v1726347444/uploads/AdobeStock_576025994_rccdh7.mov"
           type="video/mp4"
         />
         Your browser does not support the video tag.
