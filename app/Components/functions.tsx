@@ -24,12 +24,10 @@ const FeaturesSection: React.FC = () => {
         loop
         muted
         playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover z-0 opacity-30"
+        preload="auto"
+        className="absolute top-0 left-0 w-full h-full object-cover z-0"
       >
-        <source
-          src="https://res.cloudinary.com/duh4hll1l/video/upload/v1726347444/uploads/AdobeStock_576025994_rccdh7.mov"
-          type="video/mp4"
-        />
+        <source src="/bgg.mov" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
