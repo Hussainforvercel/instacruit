@@ -34,8 +34,8 @@ export default function SectionTwo() {
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true, amount: 0.5 }}
         >
-          Kontakt oss for bistand med rekruttering av riktige og gode kandidater
-          til din bedrift
+          Vi har optimalisert rekrutteringsprosessen med kunstig intelligens,
+          kvalitetssikring og analyse for bedre resultater.
         </motion.h2>
         <motion.button
           className="bg-[#830e70] text-white px-10 py-4 rounded-full hover:bg-[#bd99bd]"

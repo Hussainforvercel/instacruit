@@ -25,7 +25,7 @@ export default function ContactUs() {
         transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: true, amount: 0.5 }}
       >
-        Kontakt oss
+        Registrer interesse
       </motion.h2>
       <motion.p
         className="text-lg leading-relaxed max-w-md"
@@ -34,10 +34,8 @@ export default function ContactUs() {
         transition={{ duration: 0.6, delay: 0.3 }}
         viewport={{ once: true, amount: 0.5 }}
       >
-        Trenger du hjelp til å finne de rette kandidatene til din bedrift? Vårt
-        team står klare til å hjelpe deg. Ta kontakt med oss for å diskutere
-        dine behov og finne ut hvordan vi kan tilby deg en skreddersydd
-        rekrutteringsløsning.
+        Oppgi litt informasjon om din bedrift, og en av våre rådgivere fra
+        InstaCruit vil kontakte deg innen 24 timer.
       </motion.p>
     </motion.div>
   );

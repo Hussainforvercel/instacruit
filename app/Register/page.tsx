@@ -6,7 +6,7 @@ import MapSection from "../Components/map";
 function Register() {
   return (
     <div>
-      <ContactUs />
+      {/* <ContactUs /> */}
       <RegisterInterest />
       {/* <MapSection /> */}
     </div>

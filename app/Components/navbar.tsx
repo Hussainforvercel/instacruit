@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
         >
           <li className="my-4 md:my-0">
             <a
-              href="/"
+              href="/Om_Oss"
               className="block text-lg hover:text-[#830e70] whitespace-nowrap"
             >
               Om Oss
@@ -40,7 +40,7 @@ const Navbar: React.FC = () => {
           </li>
           <li className="my-4 md:my-0">
             <a
-              href="/about"
+              href="/tjenester"
               className="block text-lg hover:text-[#830e70] whitespace-nowrap"
             >
               Tjenester
@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
           </li>
           <li className="my-4 md:my-0">
             <a
-              href="/about"
+              href="/Register"
               className="block text-lg hover:text-[#830e70] whitespace-nowrap"
             >
               Kontakt Oss
