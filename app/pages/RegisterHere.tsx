@@ -7,7 +7,7 @@ export default function ContactUsPage() {
     <div className="relative bg-black text-white p-10 md:p-20">
       {/* Contact Us Section */}
       <motion.div
-        className="relative flex flex-col justify-center items-start py-16"
+        className="relative flex flex-col justify-center items-center text-center py-16"
         style={{
           backgroundImage: 'url("/path-to-your-background.gif")', // Replace with your background image path
           backgroundSize: "cover",
@@ -29,7 +29,7 @@ export default function ContactUsPage() {
           Registrer interesse
         </motion.h2>
         <motion.p
-          className="text-lg leading-relaxed max-w-md"
+          className="text-lg leading-relaxed max-w-lg"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
@@ -55,14 +55,14 @@ export default function ContactUsPage() {
         viewport={{ once: true, amount: 0.5 }}
       >
         <motion.div
-          className="relative z-10 p-8 mx-4 bg-black bg-opacity-90 rounded-lg shadow-lg max-w-md border-[#841F84] border-2 mb-20"
+          className="relative z-10 p-8 mx-4 bg-black bg-opacity-90 rounded-lg shadow-lg max-w-2xl border-[#841F84] border-2 mb-20"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true, amount: 0.5 }}
         >
           <motion.h1
-            className="text-4xl font-bold mb-6"
+            className="text-4xl font-bold mb-6 text-center"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -71,7 +71,7 @@ export default function ContactUsPage() {
             Kontakt oss
           </motion.h1>
           <motion.p
-            className="mb-8 text-sm"
+            className="mb-8 text-sm text-center"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}

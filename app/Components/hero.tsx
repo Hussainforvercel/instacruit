@@ -39,7 +39,8 @@ const Hero: React.FC = () => {
         loop
         playsInline
         preload="auto"
-        className="absolute inset-0 w-full md:w-1/2 h-full object-cover z-0" // Responsive background video
+        poster="/preload1.png" // Use a poster image to display before the video loads
+        className="absolute inset-0 w-full md:w-3/4 h-full object-cover z-0" // Increased width to 3/4 of the container on medium screens
       >
         <source src="/bg.mp4" type="video/mp4" />
         Your browser does not support the video tag.
@@ -83,7 +84,7 @@ const Hero: React.FC = () => {
           </motion.p>
 
           {/* Buttons Section */}
-          <div className="flex flex-col sm:flex-row justify-end space-y-4 sm:space-y-0 sm:space-x-4 mt-4">
+          <div className="flex flex-row justify-end space-x-4 mt-4">
             <motion.a
               href="#"
               className="bg-[#830e70] hover:bg-[#bd99bd] text-white font-bold py-3 px-6 rounded-xl transition duration-300"

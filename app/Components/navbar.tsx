@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-black text-white fixed w-full z-20 shadow-md">
+    <nav className="bg-black text-white fixed w-full z-20 shadow-md p-3">
       <div className="container mx-auto flex justify-between items-center py-4 px-4 md:px-8">
         {/* Logo */}
         <div className="text-2xl font-bold">InstaCruit</div>

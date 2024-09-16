@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const AboutUs = () => {
   return (
-    <section className="bg-black text-white px-6 py-16 lg:px-20 relative">
+    <section className="bg-[#830e70] text-white px-6 py-16 lg:px-20 relative">
       <div className="max-w-6xl mx-auto">
         {/* Main Heading */}
         <motion.h1
@@ -33,10 +33,10 @@ const AboutUs = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true, amount: 0.5 }}
-            className="flex flex-col items-center bg-white bg-opacity-10 p-8 rounded-lg shadow-md"
+            className="flex flex-col items-center bg-black p-8 rounded-lg shadow-md"
           >
             <Image
-              src="/10004.svg" // Replace with your image path
+              src="/10004.svg"
               alt="Feature 1"
               width={150}
               height={150}
@@ -61,10 +61,10 @@ const AboutUs = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true, amount: 0.5 }}
-            className="flex flex-col items-center bg-white bg-opacity-10 p-8 rounded-lg shadow-md"
+            className="flex flex-col items-center bg-black p-8 rounded-lg shadow-md"
           >
             <Image
-              src="/10005.svg" // Replace with your image path
+              src="/10005.svg"
               alt="Feature 2"
               width={150}
               height={150}
@@ -87,14 +87,14 @@ const AboutUs = () => {
 
         {/* Vår teknologi */}
         <motion.div
-          className="mt-16 flex flex-col items-center bg-white bg-opacity-10 p-8 rounded-lg shadow-md"
+          className="mt-16 flex flex-col items-center bg-black p-8 rounded-lg shadow-md"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          viewport={{ once: false, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.5 }}
         >
           <Image
-            src="/10006.svg" // Replace with your image path
+            src="/10006.svg"
             alt="Feature 3"
             width={150}
             height={150}
