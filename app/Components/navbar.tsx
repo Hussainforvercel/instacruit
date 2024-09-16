@@ -10,10 +10,12 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-black text-white fixed w-full z-20 shadow-md p-3">
+    <nav className="bg-black text-white fixed w-full z-20 shadow-md">
       <div className="container mx-auto flex justify-between items-center py-4 px-4 md:px-8">
         {/* Logo */}
-        <div className="text-2xl font-bold">InstaCruit</div>
+        <div className="text-2xl font-bold">
+          <img src="/logo.png" alt="InstaCruit Logo" className="h-12 md:h-16" />
+        </div>
 
         {/* Hamburger Icon */}
         <div className="md:hidden" onClick={toggleMenu}>
