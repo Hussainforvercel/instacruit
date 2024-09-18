@@ -10,7 +10,7 @@ const AboutUs = () => {
       <div className="max-w-6xl mx-auto">
         {/* Main Heading */}
         <motion.h1
-          className="text-3xl font-bold mb-10 text-center"
+          className="text-3xl font-bold mb-10 text-center mt-10"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
