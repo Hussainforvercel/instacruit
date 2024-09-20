@@ -39,8 +39,8 @@ const Hero: React.FC = () => {
         loop
         playsInline
         preload="auto"
-        // poster="/preload1.png" // Use a poster image to display before the video loads
-        className="absolute inset-0 w-full md:w-3/4 h-full object-cover z-0" // Increased width to 3/4 of the container on medium screens
+        poster="/poster11.png" // Use a poster image to display before the video loads
+        className="absolute inset-0 w-full h-full object-cover z-0" // Ensures the video covers the entire background
       >
         <source src="/bbgg.mp4" type="video/mp4" />
         Your browser does not support the video tag.

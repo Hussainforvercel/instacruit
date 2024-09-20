@@ -18,10 +18,10 @@ const revealVariant = {
 const FeaturesSection: React.FC = () => {
   return (
     <section className="relative bg-black py-16 overflow-hidden">
-      {/* Color Line */}
-      <div className="absolute top-0 w-full h-20 bg-[#830e70] z-20">
+      {/* Adjust the z-index and height of the Color Line */}
+      <div className="absolute top-0 w-full h-20 md:h-24 bg-[#830e70] z-10">
         <motion.h2
-          className="text-3xl font-bold text-center mb-4 text-white mt-4"
+          className="text-3xl font-bold text-center mb-4 text-white mt-4 md:mt-6"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.2 }}
@@ -54,25 +54,7 @@ const FeaturesSection: React.FC = () => {
         Your browser does not support the video tag.
       </video>
 
-      <div className="relative container mx-auto px-6 z-10 mt-20">
-        {/* <motion.h2
-          className="text-3xl font-bold text-center mb-4 text-white"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false, amount: 0.2 }}
-          variants={revealVariant}
-        >
-          FUNKSJONER
-        </motion.h2>
-        <motion.div
-          className="flex justify-center mb-10"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          variants={revealVariant}
-        >
-          <span className="w-12 h-1 bg-white inline-block rounded-full"></span>
-        </motion.div> */}
+      <div className="relative container mx-auto px-6 z-20 mt-24 md:mt-28">
         <div className="flex flex-col space-y-8">
           {/* Row 1: Card - Image */}
           <motion.div
